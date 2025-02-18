@@ -11,9 +11,9 @@
     <body>
             <div class="MBTI">
 
-            <h3>3. MBTI</h3>
-            <p>В эту главу включены описания всех шестнадцати типов личности. Одно из них ближе всего к вашему истинному "я".</p>
-            <p>Также в этой части вы найдете перечень сильных и слабых сторон вашего типа личности.</p>
+            <h2>3. MBTI</h3>
+            <h3>В эту главу включены описания всех шестнадцати типов личности. Одно из них ближе всего к вашему истинному "я".</h3>
+            <h3>Также в этой части вы найдете перечень сильных и слабых сторон вашего типа личности.</h3>
             <p><b><i>1) ENFJ</i></b></p>
             <p><i>Экстраверт, интуит, иррационал, логик</i></p>
             <p>ENFJ славятся любовью к людям. Они придают важнейшее значение взаимоотношениям с людьми; им свойственно заботиться о других. Они обладают светлым взглядом на жизнь и ощущают личную заинтересованность во всем. </p>
@@ -212,96 +212,5 @@
 
 
 
-
-    <div id="content">
-        <div id="feature">
-          <p><center>Пройдите небольшой опрос пожалуйста</center></p>
-          <head>
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Кнопки с текстом под каждой</title>
-                <style>
-                    /* Стили для контейнера кнопки и текста */
-                    .button-container {
-                        margin: 20px; /* Отступ между контейнерами */
-                        text-align: center; /* Центрируем содержимое */
-                    }
-            
-                    /* Стили для кнопок */
-                    .image-button {
-                        background-size: cover; /* Растягиваем изображение на всю кнопку */
-                        background-position: center; /* Центрируем изображение */
-                        width: 150px; /* Ширина кнопки */
-                        height: 150px; /* Высота кнопки */
-                        border: none; /* Убираем границу */
-                        cursor: pointer; /* Меняем курсор на указатель */
-                        border-radius: 10px; /* Закругляем углы */
-                    }
-            
-                    .image-button:hover {
-                        opacity: 0.8; /* Эффект при наведении */
-                    }
-            
-                    /* Стили для текста */
-                    .output-text {
-                        margin-top: 10px; /* Отступ текста от кнопки */
-                        font-size: 18px;
-                        color: #333;
-                        display: none; /* Изначально текст скрыт */
-                    }
-                </style>
-            </head>
-            <body>
-                <p><center>Ваша оценка сайта</center></p>
-                <!-- Контейнер для первой кнопки -->
-                <div class="button-container">
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png');" onclick="showMessage('message1', 'Спасибо за отзыв!')"></button>
-                        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3ebee9fba77d7c220630c_15.png');" onclick="showMessage('message1', 'Спасибо за отзыв!')"></button>
-                        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png');" onclick="showMessage('message1', 'Спасибо за отзыв!')"></button>
-                    <p id="message1" class="output-text"></p>
-                </div>
-                <p><center>Ваша оценка теста</center></p>
-                <!-- Контейнер для второй кнопки -->
-                <div class="button-container">
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png');" onclick="showMessage('message2', 'Спасибо за отзыв!')"></button>
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3ebee9fba77d7c220630c_15.png');" onclick="showMessage('message2', 'Спасибо за отзыв!')"></button>
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png');" onclick="showMessage('message2', 'Спасибо за отзыв!')"></button>
-                    <p id="message2" class="output-text"></p>
-                </div>
-                <p><center>Информативен ли был для вас сайт</center></p>
-                <!-- Контейнер для третьей кнопки -->
-                <div class="button-container">
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png');" onclick="showMessage('message3', 'Спасибо за отзыв!')"></button>
-                        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3ebee9fba77d7c220630c_15.png');" onclick="showMessage('message3', 'Спасибо за отзыв!')"></button>
-                        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png');" onclick="showMessage('message3', 'Спасибо за отзыв!')"></button>
-                    <p id="message3" class="output-text"></p>
-                </div>
-            
-                <script>
-                    // Функция, которая будет вызвана при нажатии на кнопку
-                    function showMessage(elementId, message) {
-                        // Получаем элемент для вывода текста
-                        var outputElement = document.getElementById(elementId);
-                        
-                        // Устанавливаем текст
-                        outputElement.textContent = message;
-                        
-                        // Показываем текст
-                        outputElement.style.display = "block";
-                    }
-                </script>
-            
-            </body>
-            </html>
-            </body>
-            </html>
-            </div>
-        </div>
-    </div>
-
-
- 
-            
     </body> 
 </html>
