@@ -2,37 +2,77 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link href="static/style.css" rel="stylesheet" type="text/css" />
         <meta charset="UTF-8" />
         <title>Типы личности и всё он них</title>
         <link rel="stylesheet" href="style.css">
+
+        <style>
+            /* Стили для контейнера кнопки и текста */
+            .button-container {
+                margin: 20px; /* Отступ между контейнерами */
+                text-align: center; /* Центрируем содержимое */
+            }
+    
+            /* Стили для кнопок */
+            .image-button {
+                background-size: cover; /* Растягиваем изображение на всю кнопку */
+                background-position: center; /* Центрируем изображение */
+                width: 150px; /* Ширина кнопки */
+                height: 150px; /* Высота кнопки */
+                border: none; /* Убираем границу */
+                cursor: pointer; /* Меняем курсор на указатель */
+                border-radius: 10px; /* Закругляем углы */
+            }
+    
+            .image-button:hover {
+                opacity: 0.8; /* Эффект при наведении */
+            }
+    
+            /* Стили для текста */
+            .output-text {
+                margin-top: 10px; /* Отступ текста от кнопки */
+                font-size: 18px;
+                color: #333;
+                display: none; /* Изначально текст скрыт */
+            }
+            .items {display: flex;}
+            .iteml{float:left; width: 33%; padding: 5%;}
+            .itemr{float:right; width: 33%; padding: 5%;}
+            .ipid{padding: 100px;}
+        </style>
     </head>
-    <body>
+    <body class="ipid">
        <h1>Добро пожаловать на сайт! Здесь вы можете узнать информацию о всех типах личности, а также познать себя</h1>
-        <div class="menu">
-            <div class="card1 w-75 mb-3">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card1-body">
-                    <h5 class="card1-title">Главная</h5>
-                    <p class="card1-text">Главная страница. Здесь Вы можете узнать о психологии типов личности</p>
-                    <a href="project_osn_str.html" class="btn btn-primary stretched-link">Перейти</a>
+        <div class="menu ">
+            <div class="items">
+                <div class="card1 w-75 mb-3 iteml">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card1-body">
+                        <h5 class="card1-title">Главная</h5>
+                        <p class="card1-text">Главная страница. Здесь Вы можете узнать о психологии типов личности</p>
+                        <a href="project_osn_str" class="btn btn-primary stretched-link">Перейти</a>
+                    </div>
+                </div>
+                <div class="card2 w-75 mb-3 iteml">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card2-body">
+                        <h5 class="card2-title">Тест на определение типа личности</h5>
+                        <p class="card2-text">Telegram-бот с тестом</p>
+                        <a href="https://web.telegram.org/a/#7838758888" class="btn btn-primary stretched-link">Перейти</a>
+                    </div>
+                </div>
+                <div class="col itemr">
+                    <div class="card3" style="width: 18rem;">
+                        <img src="https://i.pinimg.com/736x/68/fa/54/68fa54673ff279bdc0bee589b58cc7c1.jpg" class="card-img-top" alt="...">
+                        <div class="card3-body">
+                            <h5 class="card3-title">MBTI</h5>
+                            <p class="card3-text">Подробное описание всех типов</p>
+                            <a href="/MBTI" class="btn btn-primary">Перейти</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card2 w-75 mb-3">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card2-body">
-                    <h5 class="card2-title">Тест на определение типа личности</h5>
-                    <p class="card2-text">Telegram-бот с тестом</p>
-                    <a href="https://web.telegram.org/a/#7838758888" class="btn btn-primary stretched-link">Перейти</a>
-            </div>
-            <div class="card3">
-                <img src="https://i.pinimg.com/736x/68/fa/54/68fa54673ff279bdc0bee589b58cc7c1.jpg" class="card-img-top" alt="...">
-                <div class="card3-body">
-                    <h5 class="card3-title">MBTI</h5>
-                    <p class="card3-text">Подробное описание всех типов</p>
-                    <a href="MBTI.html" class="btn btn-primary">Перейти</a>
-                </div>
-            </div>
-        </div>
         <h2>1. Типы личности.</h2>
         <h3>Для начала узнаем, что из себя представляет теория типов личности, и для чего они нужны.</h3>
         <p>    Согласно системе MBTI (или "Индикатор типов личности Майерс-Бриггс"), существует шестнадцать различных типов личности, и каждому человеку соответствует один из них. Установление своего типа личности поможет вам обратить себе на пользу свои преимущества. Познание себя очень важно, если вы хотите построить лучшую жизнь.</p>
@@ -40,25 +80,17 @@
         <h3>Перейдём к признакам типа личности</h3>
         <p>Система самооценки по методу типа личности базируется на четырех основных аспектах человеческой натуры: каким образом мы взаимодействуем с окружающим миром и куда направляем свою энергию; какого рода инфоромацию мы воспринимаем легче всего; каким образом мы принимаем решения. Каждый из этих признаков имеет особые названия:</p>
         <p><b><i>1. Как мы взаимодействуем с окружающим миром и куда направляем свою энегию:</i></b></p>
-        <ul>
             <li><i>Экстраверсия</i> - тех, кто предпочитает взаимодействие с внешним миром, мы называем <b>экстравертами</b>.</li>
             <li><i>Интроверсия</i> - тех, кто более склонен к внутреннему миру (предпочитает быть один) - <b>интровертами</b></li>
-        </ul>
         <p><b><i>2. На какую информацию мы прежде всего обращаем внимание:</i></b></p>
-        <ul>
             <li><i>Сенсорика</i> - когда человек получает информацию при помощи пяти органов чувств</li>
             <li><i>Интуиция</i> - когда человек доверяет своему "шестому чувству" (интуиции) гораздо больше, чем пяти остальным</li>            
-        </ul>
         <p><b><i>3. Как мы принимаем решения:</i></b></p>
-        <ul>
             <li><i>Рациональность</i> - беспристрастное, объективное принятие решения</li>
             <li><i>Иррациональность</i> - принятие решения исходя из личных, субъективных склонностей или ценностей</li>
-        </ul>
         <p><b><i>4. Предпочитаем ли мы определенность и сразу принимаем решения или живем без оков и принимаем информацию к сведению:</i></b></p>
-        <ul>
             <li><i>Логика (статика)</i> - люди-статики чувствуют себя комфортно, если пространство вокруг них организованно</li>
             <li><i>Этика (динамика)</i> - люди-динамики склонны к более свободному образу жизни</li>
-        </ul>
         <p>Если составить максимальное количество сочетаний из этих восьми признаков, то получится шестнадцать вариантов:</p>
        
        <div class='tableMBTI'>
@@ -275,7 +307,7 @@
     <div class="black-line"></div> <!-- Линия -->
      <div id="content">
         <div id="feature">
-          <h2><center>Пройдите небольшой опрос пожалуйста</center></h2>
+          <h2><center>Пройдите небольшой опрос, пожалуйста</center></h2>
           <head>
             <head>
                 <meta charset="UTF-8">
