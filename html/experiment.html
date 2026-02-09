@@ -1,3 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психологический тест</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            /* Убираем центрирование по вертикали для всего body */
+            display: block; 
+        }
+
+        /* Контейнер-обертка для позиционирования теста */
+        .quiz-wrapper {
+            display: flex;
+            justify-content: center; /* Центрируем по горизонтали */
+            margin-top: 50px;       /* Отступ сверху, чтобы тест не прилипал к контенту выше */
+            margin-bottom: 50px;    /* Отступ снизу */
+        }
+
+        #quiz-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #final-code {
+            font-size: 32px;
+            font-weight: bold;
+            color: #28a745;
+            letter-spacing: 5px;
+            margin: 20px 0;
+        }
+
+        .progress {
+            font-size: 14px;
+            color: #777;
+            margin-top: 15px;
+        }
+
+        /* Стиль для заглушки контента (имитация вашей страницы) */
+        .content-placeholder {
+            height: 800px; 
+            background: #eee;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ccc;
+        }
+    </style>
+</head>
+<body>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -313,30 +393,56 @@
                 </style>
             </head>
             <body>
-                <h3><center>Ваша оценка сайта</center></h3>
-                <!-- Контейнер для первой кнопки -->
-                <div class="button-container">
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png');" onclick="showMessage('message1', 'Спасибо за отзыв!')"></button>
-                        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3ebee9fba77d7c220630c_15.png');" onclick="showMessage('message1', 'Спасибо за отзыв!')"></button>
-                        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png');" onclick="showMessage('message1', 'Спасибо за отзыв!')"></button>
-                    <p id="message1" class="output-text"></p>
-                </div>
-                <h3><center>Ваша оценка теста</center></h3>
-                <!-- Контейнер для второй кнопки -->
-                <div class="button-container">
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png');" onclick="showMessage('message2', 'Спасибо за отзыв!')"></button>
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3ebee9fba77d7c220630c_15.png');" onclick="showMessage('message2', 'Спасибо за отзыв!')"></button>
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png');" onclick="showMessage('message2', 'Спасибо за отзыв!')"></button>
-                    <p id="message2" class="output-text"></p>
-                </div>
-                <h3><center>Информативен ли был для вас сайт</center></h3>
-                <!-- Контейнер для третьей кнопки -->
-                <div class="button-container">
-                    <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png');" onclick="showMessage('message3', 'Спасибо за отзыв!')"></button>
-                        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3ebee9fba77d7c220630c_15.png');" onclick="showMessage('message3', 'Спасибо за отзыв!')"></button>
-                        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png');" onclick="showMessage('message3', 'Спасибо за отзыв!')"></button>
-                    <p id="message3" class="output-text"></p>
-                </div>
+<h3><center>Ваша оценка сайта</center></h3>
+<!-- Один контейнер для всех трёх кнопок -->
+<div class="button-container" style="display: flex; justify-content: center; gap: 20px;">
+    <div style="text-align: center;">
+        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png');" onclick="showMessage('message1', 'Спасибо за отзыв!')"></button>
+        <p id="message1" class="output-text"></p>
+    </div>
+    <div style="text-align: center;">
+        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3ebee9fba77d7c220630c_15.png');" onclick="showMessage('message1', 'Спасибо за отзыв!')"></button>
+        <p id="message1" class="output-text"></p>
+    </div>
+    <div style="text-align: center;">
+        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png');" onclick="showMessage('message1', 'Спасибо за отзыв!')"></button>
+        <p id="message1" class="output-text"></p>
+    </div>
+</div>
+
+<h3><center>Ваша оценка теста</center></h3>
+<!-- Один контейнер для всех трёх кнопок -->
+<div class="button-container" style="display: flex; justify-content: center; gap: 20px;">
+    <div style="text-align: center;">
+        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png');" onclick="showMessage('message2', 'Спасибо за отзыв!')"></button>
+        <p id="message2" class="output-text"></p>
+    </div>
+    <div style="text-align: center;">
+        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3ebee9fba77d7c220630c_15.png');" onclick="showMessage('message2', 'Спасибо за отзыв!')"></button>
+        <p id="message2" class="output-text"></p>
+    </div>
+    <div style="text-align: center;">
+        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png');" onclick="showMessage('message2', 'Спасибо за отзыв!')"></button>
+        <p id="message2" class="output-text"></p>
+    </div>
+</div>
+
+<h3><center>Информативен ли был для вас сайт</center></h3>
+<!-- Один контейнер для всех трёх кнопок -->
+<div class="button-container" style="display: flex; justify-content: center; gap: 20px;">
+    <div style="text-align: center;">
+        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png');" onclick="showMessage('message3', 'Спасибо за отзыв!')"></button>
+        <p id="message3" class="output-text"></p>
+    </div>
+    <div style="text-align: center;">
+        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3ebee9fba77d7c220630c_15.png');" onclick="showMessage('message3', 'Спасибо за отзыв!')"></button>
+        <p id="message3" class="output-text"></p>
+    </div>
+    <div style="text-align: center;">
+        <button class="image-button" style="background-image: url('https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5d0c2ab246786ca1d5e_86.png');" onclick="showMessage('message3', 'Спасибо за отзыв!')"></button>
+        <p id="message3" class="output-text"></p>
+    </div>
+</div>
             
                 <script>
                     // Функция, которая будет вызвана при нажатии на кнопку
@@ -366,3 +472,97 @@
         
     </body> 
 </html>
+
+<div id="mbti-quiz-wrapper" style="display: flex; justify-content: center; margin: 50px 0; font-family: sans-serif;">
+    <div id="mbti-quiz-card" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 500px; width: 100%; text-align: center; box-sizing: border-box;">
+        
+        <div id="mbti-question-container">
+            <h3 id="mbti-q-text" style="margin-bottom: 20px; min-height: 50px;">Загрузка вопроса...</h3>
+            <div id="mbti-btn-group"></div>
+            <p style="font-size: 14px; color: #777; margin-top: 15px;">Вопрос <span id="mbti-num">1</span> из 12</p>
+        </div>
+
+        <div id="mbti-result-box" style="display:none;">
+            <h2 style="font-size: 20px; margin-bottom: 10px;">Ваш итоговый тип:</h2>
+            <div id="mbti-final-code" style="font-size: 32px; font-weight: bold; color: #28a745; letter-spacing: 5px; margin: 20px 0;"></div>
+            <p style="font-size: 14px; color: #555; margin-bottom: 20px;">Сохраните эту комбинацию букв. Она отражает ваши доминирующие черты.</p>
+            <button class="mbti-action-btn" onclick="location.reload()" style="background-color: #6c757d;">Пройти заново</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Стили применяются ТОЛЬКО к кнопкам внутри нашего теста */
+    #mbti-quiz-card .mbti-action-btn, 
+    #mbti-quiz-card button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+        text-transform: none; /* Чтобы не наследовались капсы */
+    }
+
+    #mbti-quiz-card button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+(function() {
+    const quizData = [
+        { q: "1. Вы больше любите жить 'здесь и сейчас' или стараетесь ускорить приход перемен?", a: { "S": "Здесь и сейчас", "N": "Ускорить перемены" } },
+        { q: "2. Вы доверяете вдохновению или тому, что надежно и конкретно?", a: { "N": "Вдохновению", "S": "Надежному и конкретному" } },
+        { q: "3. Одобряете новые идеи только если они принесут пользу или из-за новизны?", a: { "T": "Только ради пользы", "N": "Из-за новизны" } },
+        { q: "4. Вы заряжаетесь энергией в обществе или в одиночестве/небольшой компании?", a: { "E": "В обществе", "I": "В одиночестве / близком кругу" } },
+        { q: "5. Вы любите находиться в центре внимания?", a: { "E": "Да", "I": "Нет" } },
+        { q: "6. Вы больше говорите, чем слушаете, или наоборот?", a: { "E": "Больше говорю", "I": "Больше слушаю" } },
+        { q: "7. Чувства ценны независимо от того, имеют ли они смысл или нет?", a: { "P": "Да", "J": "Нет" } },
+        { q: "8. Вы склонны предъявлять одинаковые требования ко всем или цените гармонию?", a: { "T": "Требования ко всем", "F": "Гармонию" } },
+        { q: "9. Вы движетесь к успеху или к похвале?", a: { "T": "К успеху", "F": "К похвале" } },
+        { q: "10. Вы предпочитаете, чтобы решение было принято однозначно?", a: { "J": "Да", "P": "Нет" } },
+        { q: "11. Вы ставите цель и достигаете её или меняете её с течением времени?", a: { "J": "Достигаю цель", "P": "Меняю по ситуации" } },
+        { q: "12. Вы получаете удовлетворение, когда работа закончена или начинается?", a: { "J": "Когда закончена", "P": "Когда начинается" } }
+    ];
+
+    let step = 0;
+    let scores = { E:0, I:0, S:0, N:0, T:0, F:0, J:0, P:0 }; 
+
+    function render() {
+        const item = quizData[step];
+        document.getElementById("mbti-q-text").innerText = item.q;
+        document.getElementById("mbti-num").innerText = step + 1;
+        const buttons = document.getElementById("mbti-btn-group");
+        buttons.innerHTML = "";
+        for (let key in item.a) {
+            let btn = document.createElement("button");
+            btn.innerText = item.a[key];
+            btn.onclick = () => {
+                scores[key]++;
+                step++;
+                if (step < quizData.length) render(); else showFinal();
+            };
+            buttons.appendChild(btn);
+        }
+    }
+
+    function showFinal() {
+        document.getElementById("mbti-question-container").style.display = "none";
+        document.getElementById("mbti-result-box").style.display = "block";
+        const finalType = 
+            (scores['E'] >= scores['I'] ? 'E' : 'I') +
+            (scores['S'] >= scores['N'] ? 'S' : 'N') +
+            (scores['T'] >= (scores['F'] || 0) ? 'T' : 'F') +
+            (scores['J'] >= scores['P'] ? 'J' : 'P');
+        document.getElementById("mbti-final-code").innerText = finalType;
+    }
+
+    render();
+})();
+</script>
