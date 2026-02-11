@@ -11,32 +11,189 @@
     <div class="container">
         <h1>Добро пожаловать в мир психологии типов личности</h1>
         
+        <!-- ГЛАВНОЕ МЕНЮ С МИНИМАЛИСТИЧНЫМИ ИКОНКАМИ -->
         <!-- ГЛАВНОЕ МЕНЮ -->
-        <div class="menu-grid">
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200/a8e4a0/568a50?text=Теория" alt="Главная">
-                <h5>Главная</h5>
-                <p>Основы психологии типов личности и теория.</p>
-                <a href="#theory" class="btn">Читать теорию</a>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200/a8e4a0/568a50?text=Тест" alt="Тест">
-                <h5>Тест на тип личности</h5>
-                <p>Пройдите короткий опрос прямо сейчас.</p>
-                <a href="#quiz-anchor" class="btn">Пройти тест</a>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200/a8e4a0/568a50?text=MBTI" alt="MBTI">
-                <h5>Описание типов (MBTI)</h5>
-                <p>Подробное описание всех 16 типов личности.</p>
-                <a href="MBTI.html" class="btn">Читать описания</a>
-            </div>
-        </div>
+<div class="menu-grid">
+    
+    <!-- Карточка 1: Главная -->
+    <div class="card card-centered">
+        <!-- Иконка Домика -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="card-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        
+        <h5>Главная</h5>
+        <p>Основы психологии типов личности и теория.</p>
+        <a href="#theory-start" class="btn">Читать теорию</a>
+    </div>
+    
+    <!-- Карточка 2: MBTI -->
+    <div class="card card-centered">
+        <!-- НОВАЯ ИКОНКА: Простой профиль человека -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="card-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+        </svg>
 
-        <div id="theory">
-            <h2>1. Что такое типы личности?</h2>
-            <p>Согласно системе MBTI, существует 16 типов личности. Понимание своего типа помогает использовать сильные стороны.</p>
+        <h5>Описание типов (MBTI)</h5>
+        <p>Подробное описание всех 16 типов личности.</p>
+        <a href="MBTI.html" class="btn">Читать описания</a>
+    </div>
+    
+</div>
+
+        <!-- НАЧАЛО ТЕОРИИ -->
+        <div id="theory-start">
+            <h2>1. Типы личности: Введение</h2>
+            <p>Согласно системе MBTI (или "Индикатор типов личности Майерс-Бриггс"), существует шестнадцать различных типов личности, и каждому человеку соответствует один из них. Установление своего типа личности поможет вам обратить себе на пользу свои преимущества. Познание себя очень важно, если вы хотите построить лучшую жизнь.</p>
+            <p>По мере знакомства с теорией типа личности вы убедитесь, что все типы личности одинаково ценны. Они не определяют, какой человек лучше, а какой хуже, умнее или глупее. Однако эта теория поможет понять, что движет каждым человеком, и даст применить эти знания при выборе своего пути.</p>
+
+            <h3>Признаки типа личности</h3>
+            <p>Система самооценки базируется на четырех основных аспектах человеческой натуры. Каждый из этих признаков имеет особые названия:</p>
+            
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 15px; background: white; padding: 15px; border-radius: 12px; border-left: 4px solid var(--brand-color); box-shadow: var(--shadow);">
+                    <b>1. Взаимодействие с миром (Энергия):</b><br>
+                    <i>Экстраверсия (E)</i> — фокус на внешний мир.<br>
+                    <i>Интроверсия (I)</i> — фокус на внутренний мир.
+                </li>
+                <li style="margin-bottom: 15px; background: white; padding: 15px; border-radius: 12px; border-left: 4px solid var(--brand-color); box-shadow: var(--shadow);">
+                    <b>2. Восприятие информации:</b><br>
+                    <i>Сенсорика (S)</i> — факты, детали, 5 чувств.<br>
+                    <i>Интуиция (N)</i> — смыслы, возможности, шестое чувство.
+                </li>
+                <li style="margin-bottom: 15px; background: white; padding: 15px; border-radius: 12px; border-left: 4px solid var(--brand-color); box-shadow: var(--shadow);">
+                    <b>3. Принятие решений:</b><br>
+                    <i>Рациональность/Логика (T)</i> — объективность, анализ.<br>
+                    <i>Иррациональность/Этика (F)</i> — субъективность, ценности, люди.
+                </li>
+                <li style="margin-bottom: 15px; background: white; padding: 15px; border-radius: 12px; border-left: 4px solid var(--brand-color); box-shadow: var(--shadow);">
+                    <b>4. Организация жизни:</b><br>
+                    <i>Логика/Статика (J)</i> — любят план, порядок, определенность.<br>
+                    <i>Этика/Динамика (P)</i> — любят спонтанность, гибкость, свободу.
+                </li>
+            </ul>
+
+            <h3>Таблица всех 16 типов</h3>
+            <div class="table-responsive">
+                <table> 
+                    <thead>
+                        <tr>
+                            <th colspan="4" style="text-align: center;">Матрица типов MBTI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>ИСРТ (ISTJ)</td><td>ИСЦТ (ISFJ)</td><td>ИНЦТ (INFJ)</td><td>ИНРТ (INTJ)</td></tr>
+                        <tr><td>ИСРД (ISTP)</td><td>ИСЦД (ISFP)</td><td>ИНЦД (INFP)</td><td>ИНРД (INTP)</td></tr>
+                        <tr><td>ЭСРД (ESTP)</td><td>ЭСЦД (ESFP)</td><td>ЭНЦД (ENFP)</td><td>ЭНРД (ENTP)</td></tr>
+                        <tr><td>ЭСРТ (ESTJ)</td><td>ЭСЦТ (ESFJ)</td><td>ЭНЦТ (ENFJ)</td><td>ЭНРТ (ENTJ)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><small>* В скобках даны принятые международные обозначения</small></p>
+
+            <div class="black-line"></div>
+
+            <h2>2. Подробное сравнение признаков</h2>
+
+            <!-- 1. E vs I -->
+            <h3>1. Экстраверсия (E) / Интроверсия (I)</h3>
+            <p>Принято считать, что экстраверты - это люди общительные, а интроверты - застенчивые. Но на самом деле это не так.</p>
+            <p>Экстраверты тянутся к другим людям и испытывают большую радость от общения с ними. Они познают мир на собственном опыте. Интроверты же пытаются понять мир умом, прежде чем исследовать его на опыте.</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="50%">Экстраверты (E)</th>
+                            <th width="50%">Интроверты (I)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Заряжаются энергией в обществе людей</td><td>Заряжаются энергией в одиночестве</td></tr>
+                        <tr><td>Любят быть в центре внимания</td><td>Избегают быть в центре внимания</td></tr>
+                        <tr><td>Сначала действуют, потом думают</td><td>Сначала думают, потом действуют</td></tr>
+                        <tr><td>Склонны размышлять вслух</td><td>Склонны продумывать всё в уме</td></tr>
+                        <tr><td>Более открыты для окружающих</td><td>Более замкнуты; предпочитают узкий круг</td></tr>
+                        <tr><td>Больше говорят, чем слушают</td><td>Больше слушают, чем говорят</td></tr>
+                        <tr><td>Предпочитают широту глубине</td><td>Предпочитают глубину широте</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 2. S vs N -->
+            <h3>2. Сенсорика (S) / Интуиция (N)</h3>
+            <p>Сенсорики фиксируют свое внимание на том, что они видят, слышат, осязают. Сталкиваясь с ситуацией, сенсорик хочет определить, что происходит *сейчас*.</p>
+            <p>Интуитивы ценят воображение и доверяют предчувствиям. Сталкиваясь с ситуацией, интуитив стремится осмыслить ее и возможные последствия в будущем.</p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="50%">Сенсорики (S)</th>
+                            <th width="50%">Интуитивы (N)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Доверяют надежному и конкретному</td><td>Доверяют вдохновению и игре ума</td></tr>
+                        <tr><td>Ценят реализм и здравый смысл</td><td>Ценят воображение и новшества</td></tr>
+                        <tr><td>Любят оттачивать мастерство</td><td>Любят осваивать новое, потом теряют интерес</td></tr>
+                        <tr><td>Точны в деталях и фактах</td><td>Используют метафоры и общие фразы</td></tr>
+                        <tr><td>Ориентированы на настояще</td><td>Ориентированы на будущее</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 3. T vs F -->
+            <h3>3. Рациональность (T) / Этика (F)</h3>
+            <p>Рационалы (Логики) принимают решения, руководствуясь объективным анализом. Они взвешивают "за" и "против".</p>
+            <p>Иррационалы (Этики) принимают решения исходя из своих ценностей и того, как это повлияет на людей. Им важна гармония.</p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="50%">Рационалы (T)</th>
+                            <th width="50%">Этики (F)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Решают проблемы объективным анализом</td><td>Смотрят, как действия повлияют на людей</td></tr>
+                        <tr><td>Ценят логику, справедливость и честность</td><td>Ценят сопереживание и гармонию</td></tr>
+                        <tr><td>Склонны критиковать недостатки</td><td>Стараются не обижать, хвалят</td></tr>
+                        <tr><td>Правда важнее такта</td><td>Правда и такт важны одинаково</td></tr>
+                        <tr><td>Мотивация: достичь результата</td><td>Мотивация: получить похвалу/одобрение</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 4. J vs P -->
+            <h3>4. Логика/Статика (J) / Этика/Динамика (P)</h3>
+            <p>Люди типа J (Суждения) предпочитают, чтобы жизнь была организована и урегулирована. Они любят планы.</p>
+            <p>Люди типа P (Восприятие) предпочитают спонтанность и гибкость. Они хотят разобраться в жизни, а не управлять ею.</p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="50%">Статики (J)</th>
+                            <th width="50%">Динамики (P)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Хотят, чтобы решение было принято однозначно</td><td>Предпочитают оставлять свободу выбора</td></tr>
+                        <tr><td>Сначала работа, потом развлечения</td><td>Сначала развлечения, потом работа (может быть)</td></tr>
+                        <tr><td>Стремятся достичь цели в срок</td><td>Меняют цели по мере поступления информации</td></tr>
+                        <tr><td>Ориентированы на результат (закончить)</td><td>Ориентированы на процесс (как делается)</td></tr>
+                        <tr><td>Время — ограниченный ресурс</td><td>Время — растяжимое понятие</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="background: #e8f5e9; padding: 20px; border-radius: 16px; border-left: 5px solid var(--brand-color);">
+                <b>Важно помнить:</b> в каждом человеке сочетаются оба типа поведения. Однако для каждого из нас один из этих типов поведения более естественный, проявляется гораздо чаще и с большим успехом, чем другой.
+            </p>
         </div>
+        <!-- КОНЕЦ ТЕОРИИ -->
 
         <div class="black-line"></div>
 
@@ -97,62 +254,48 @@
         ];
 
         let currentStep = 0;
-        // Объект для подсчета очков
         let scores = { E:0, I:0, S:0, N:0, T:0, F:0, J:0, P:0 };
 
-        // Функция отрисовки вопроса
         function renderQuestion() {
             const qContainer = document.getElementById("mbti-question-container");
             const rBox = document.getElementById("mbti-result-box");
             
-            // Если вопросы кончились, показываем результат
             if (currentStep >= quizData.length) {
                 showFinalResult();
                 return;
             }
 
-            // Показываем контейнер вопроса, скрываем результат
             qContainer.style.display = "block";
             rBox.style.display = "none";
 
             const item = quizData[currentStep];
-            
-            // Обновляем текст
             document.getElementById("mbti-q-text").innerText = item.q;
             document.getElementById("mbti-num").innerText = currentStep + 1;
 
-            // Генерируем кнопки
             const btnGroup = document.getElementById("mbti-btn-group");
-            btnGroup.innerHTML = ""; // Очищаем старые кнопки
+            btnGroup.innerHTML = ""; 
 
-            // Проходим по вариантам ответов (key = тип буквы, val = текст ответа)
             for (let typeKey in item.a) {
                 let btn = document.createElement("button");
-                btn.className = "quiz-btn"; // Класс для стилей (если нужно доп.)
+                btn.className = "quiz-btn";
                 btn.innerText = item.a[typeKey];
-                
-                // Добавляем событие клика
                 btn.onclick = function() {
                     handleAnswer(typeKey);
                 };
-                
                 btnGroup.appendChild(btn);
             }
         }
 
-        // Обработка ответа
         function handleAnswer(type) {
-            scores[type]++; // Увеличиваем счетчик выбранной буквы
-            currentStep++;  // Переходим к следующему шагу
-            renderQuestion(); // Перерисовываем
+            scores[type]++; 
+            currentStep++; 
+            renderQuestion(); 
         }
 
-        // Показ и сохранение результата
         function showFinalResult() {
             document.getElementById("mbti-question-container").style.display = "none";
             document.getElementById("mbti-result-box").style.display = "block";
 
-            // Вычисляем победителей в парах
             const finalType = 
                 (scores['E'] >= scores['I'] ? 'E' : 'I') +
                 (scores['S'] >= scores['N'] ? 'S' : 'N') +
@@ -162,18 +305,15 @@
             const resultText = document.getElementById("mbti-final-code");
             resultText.innerText = finalType;
 
-            // Сохраняем в память браузера, чтобы использовать на странице MBTI.html
             localStorage.setItem('user_mbti_result', finalType);
         }
 
-        // Перезапуск
         function restartQuiz() {
             currentStep = 0;
             scores = { E:0, I:0, S:0, N:0, T:0, F:0, J:0, P:0 };
             renderQuestion();
         }
 
-        // Запуск при загрузке страницы
         document.addEventListener("DOMContentLoaded", renderQuestion);
     </script>
 
