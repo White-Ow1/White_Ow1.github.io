@@ -257,3 +257,37 @@ tr:hover td {
     h2 { font-size: 1.4rem; }
     .table-responsive { overflow-x: auto; }
 }
+
+/* --- СТИЛИ ДЛЯ ИКОНОК В МЕНЮ --- */
+.card-centered {
+    align-items: center; /* Центрируем содержимое карточки */
+    text-align: center;
+}
+
+/* --- СТИЛИ ДЛЯ ИКОНОК В МЕНЮ --- */
+.card-centered {
+    align-items: center; /* Центрируем иконку и текст по горизонтали */
+    text-align: center;
+}
+
+.card-icon {
+    width: 60px;          /* Уменьшили с 80px */
+    height: 60px;         /* Уменьшили с 80px */
+    padding: 14px;        /* Уменьшили внутренний отступ */
+    
+    color: var(--brand-dark);
+    background-color: var(--brand-light);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: var(--transition);
+    
+    /* Важно для SVG внутри Flex-контейнера, чтобы его не сплющило */
+    flex-shrink: 0; 
+    display: block;
+}
+
+.card:hover .card-icon {
+    background-color: var(--brand-color);
+    color: white;
+    transform: rotate(10deg); /* Небольшой поворот при наведении */
+}
