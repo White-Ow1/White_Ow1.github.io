@@ -1,100 +1,259 @@
-a {
-    color: red;
-    text-decoration: none;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.menu ul {
-    display: flex;
-    justify-content: space-around;
-    background-color: bisque;
-    height: 25px;
-    align-items: center;
-}
-
-.menu ul li a:hover {
-    color:blueviolet;
-}
-.card3{
-    border-radius: 1em;
-    text-align: right;
-    padding: 1em;
-}
-.card3:hover {
-    background-color: rgb(0, 0, 0,0.1);
-}
-.card3 img {
-    border-radius: 0%;
-    width: 60%;
-    margin: auto;
-}
-
-.tableMBTI table {
-    background-color: antiquewhite;
-}
-
-.signs table {
-    justify-content: space-around;
-    background-color:cornsilk;
-    height: 50px;
-    align-items: center;
+/* --- НАСТРОЙКИ И ПЕРЕМЕННЫЕ --- */
+:root {
+    /* Основной цвет: 168, 228, 160 */
+    --brand-rgb: 168, 228, 160;
+    --brand-color: rgb(var(--brand-rgb)); 
     
+    /* Производные цвета */
+    --brand-dark: rgb(75, 125, 70);       /* Темно-зеленый для текста */
+    --brand-light: rgba(168, 228, 160, 0.2); /* Светлый фон */
+    --brand-hover: rgb(140, 200, 130);
+    
+    /* Нейтральные цвета */
+    --text-main: #2c3e50;
+    --text-secondary: #5a6a7b;
+    --bg-body: #f7fbf7;
+    --bg-card: #ffffff;
+    
+    /* Интерфейс */
+    --radius: 16px;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 20px 40px -5px rgba(168, 228, 160, 0.4);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.UAIP {
-    width: 30%;
-    float: left;
-}
-
-.card-img-top{
-    height: 170px;
-    width: 220px;
-    align-items: center;
-}
-.button{
-    background: cornflowerblue;
-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-border-radius: 10px;
-font-weight: 500;
-font-size: 16px;line-height: 26px;
-text-align: center;
-color: #FFFFFF;
-text-transform: uppercase;
-}
-
-.form form input {
-    border: 1px solid #356EAD;
+/* --- БАЗОВЫЕ СТИЛИ --- */
+* {
     box-sizing: border-box;
-    border-radius: 10px;
-    opacity: 0.4;
-    width: 250px;
-    height: 30px;
-    margin: 10 px 15px 15px 10px;
-/*    внешний отступ сверху и слева (10px), а справа и снизу (15px);*/
-}
-
-.table{
-    background: antiquewhite;
-    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-    border-radius: 10px;
-    font-weight: 500;
-    font-size: 16px;line-height: 26px;
-    text-align: center;
 }
 
 body {
-    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h5 {
+    font-weight: 700;
+    color: var(--text-main);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 h1 {
-    color: rgb(188, 11, 11);
     text-align: center;
+    color: var(--brand-dark);
+    font-size: 2.5rem;
+    margin: 40px 0;
 }
 
-p {
-    font-family: verdana;
-    font-size: 20px;
+h2 {
+    border-left: 6px solid var(--brand-color);
+    padding-left: 15px;
+    font-size: 1.8rem;
+}
+
+p, li {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brand-dark);
+    transition: var(--transition);
+}
+
+/* --- КОНТЕЙНЕР --- */
+.container, .ipid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- КАРТОЧКИ (МЕНЮ) --- */
+.menu-grid, .mbti-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--brand-color);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 5px);
+    margin-bottom: 20px;
+    background-color: var(--brand-light); /* Заглушка если нет фото */
+}
+
+.card h5 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--brand-color);
+    color: var(--brand-dark);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: auto; /* Прижимает кнопку к низу */
+    box-shadow: 0 4px 15px rgba(168, 228, 160, 0.5);
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: var(--brand-dark);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* --- ТАБЛИЦЫ --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 30px 0;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: var(--brand-color);
+    color: var(--brand-dark);
+    font-weight: 700;
+}
+
+tr:hover td {
+    background-color: var(--brand-light);
+}
+
+/* --- ТЕСТ (QUIZ) --- */
+#mbti-quiz-wrapper {
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#mbti-quiz-card {
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-hover);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid var(--brand-color);
+}
+
+#mbti-btn-group button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid var(--brand-light);
+    border-radius: 12px;
+    background-color: white;
+    color: var(--text-main);
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#mbti-btn-group button:hover {
+    background-color: var(--brand-color);
+    border-color: var(--brand-color);
+    color: var(--brand-dark);
+    font-weight: 600;
+}
+
+#final-code, #mbti-final-code {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--brand-dark);
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+/* --- ОТЗЫВЫ --- */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.image-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: var(--shadow);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.image-button:hover {
+    transform: scale(1.15) rotate(5deg);
+    border-color: var(--brand-color);
+}
+
+.output-text {
+    text-align: center;
+    font-weight: bold;
+    color: var(--brand-dark);
+    margin-top: 10px;
+}
+
+.black-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--brand-color), transparent);
+    margin: 60px 0;
+    opacity: 0.6;
+}
+
+/* --- АДАПТИВ --- */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; }
+    .table-responsive { overflow-x: auto; }
 }
